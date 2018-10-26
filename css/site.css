@@ -1,1 +1,21 @@
-/* No CSS */
+body {
+  display: grid;
+  grid-template: 1fr auto auto auto 1fr / 1fr auto auto 1fr 1fr;
+  background-color: #101822;
+  color: #e8eced;
+  font: 100%/1.5 Arial, Helvetica, sans-serif;
+}
+
+#form {
+  grid-area: 2/3/-2/-3;
+  background-color: #367096;
+}
+
+#description {
+  grid-area: 3/2/-3/-2;
+  background-color: #1B2838;
+}
+
+img {
+  width: 10rem;
+}
