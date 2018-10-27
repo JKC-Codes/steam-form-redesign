@@ -12,41 +12,50 @@
 		<header>
 			<img src="img/logo.png" alt="Steam logo">
 			<h1>Create Your Account</h1>
-			<p>The ultimate entertainment platform. Play, connect, create and more.</p>
+			<p>The ultimate entertainment platform.</p>
+			<p>Play, connect, create and more.</p>
 			<p><strong>It's free to join and easy to use.</strong></p>
 		</header>
 
 		<form id="createAccount">
-			<label for="email">Your email <span title="Your email address is used to confirm purchases and help you manage access to your Steam account">?</span>
-				<input type="text" id="email">
-			</label>
-			<br>
-			<label for="password">Password <span title="Steam will send a confirmation email to this account. Please follow the link in the mail to verify your email account with Steam">?</span>
-				<input type="password" id="password">
-			</label>
-			<br>
-			<label for="confirm">Re-enter password
-				<input type="password" id="confirm">
-			</label>
-			<br>
-			<label for="age">I agree <em>and</em> am 13 years of age or older
-				<input type="checkbox" id="age">
-			</label>
-			<br>
-			<label for="terms">I have read and agree to the <a href="javascript:void">terms and conditions</a>
-				<input type="checkbox" id="terms">
-			</label>
-			<br>
-			<div>
+			<div class="fields">
+				<label for="email">Your email <sup><span title="Your email address is used to confirm purchases and help you manage access to your Steam account">?</span></sup>
+					<input type="text" id="email">
+				</label>
+
+				<label for="password">Password <sup><span title="Steam will send a confirmation email to this account. Please follow the link in the mail to verify your email account with Steam">?</span></sup>
+					<input type="password" id="password">
+				</label>
+
+				<label for="confirm">Re-enter password
+					<input type="password" id="confirm">
+				</label>
+			</div>
+
+			<div class="checkboxes">
+				<label for="age">I agree <em>and</em> am 13 years of age or older
+					<input type="checkbox" id="age">
+				</label>
+
+				<label for="terms">I have read and agree to the <a href="javascript:void">terms and conditions</a>
+					<input type="checkbox" id="terms">
+				</label>
+			</div>
+
+			<div class="captcha">
 				<label for="captcha">I'm not a robot</label>
 				<input type="checkbox" id="captcha">
-				<img src="img/recaptcha.png" alt="reCaptcha logo">
-				<a href="javascript:void">Privacy</a> - <a href="javascript:void">Terms</a>
+				<div>
+					<img src="img/recaptcha.png" alt="reCaptcha logo">
+					<p><a href="javascript:void">Privacy</a> - <a href="javascript:void">Terms</a></p>
+				</div>
 			</div>
-			<br>
-			<button for="createAccount" type="submit">Sign up now</button>
 
-			<a href="javascript:void">I already have an account</a>
+			<div class="buttons">
+				<button for="createAccount" type="submit">Sign up now</button>
+
+				<a class="log-in" href="javascript:void">I already have an account</a>
+			</div>
 		</form>
 	</section>
 

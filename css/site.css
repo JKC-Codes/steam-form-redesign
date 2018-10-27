@@ -3,12 +3,25 @@ body {
   grid-template: 1fr auto auto auto 1fr / 1fr auto auto 1fr 1fr;
   background-color: #101822;
   color: #e8eced;
-  font: 100%/1.5 Arial, Helvetica, sans-serif;
+  font: 100%/1.75 Arial, Helvetica, sans-serif;
 }
 
 h1,
 h2 {
   margin: 0;
+}
+
+a:link,
+a:visited {
+  color: #e8eced;
+}
+
+a:hover {
+  color: #7cafd0;
+}
+
+a:active {
+  color: #367096;
 }
 
 #form,
@@ -18,14 +31,153 @@ h2 {
 
 #form {
   grid-area: 2/3/-2/-3;
-  background-color: #367096;
 }
 
 #description {
   grid-area: 3/2/-3/-2;
-  background-color: #1B2838;
 }
 
-img {
-  width: 10rem;
+#form {
+  z-index: 1;
+  background: linear-gradient(to bottom right, #367096, #1b384b);
+}
+
+#form header {
+  margin-bottom: 2rem;
+}
+
+#form header img {
+  width: 8rem;
+}
+
+#form header h1 {
+  font-size: 1.75rem;
+  line-height: 2.5;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+#form header p {
+  margin: 0;
+}
+
+#form .fields label {
+  color: white;
+}
+
+#form .fields label span {
+  position: relative;
+  padding: 0.5em;
+}
+
+#form .fields label span::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  padding: 0.4em;
+  background: #22465e;
+  width: 1ch;
+  height: 1ch;
+}
+
+#form .fields input {
+  display: block;
+  width: 22.5rem;
+  min-height: 2rem;
+  margin-bottom: 1rem;
+  background-color: #1b384b;
+  border: 0.05rem solid #367096;
+  color: white;
+  font: 100%/1.75 Arial, Helvetica, sans-serif;
+  padding: 0.25rem 0.75rem;
+}
+
+#form .checkboxes label {
+  display: block;
+  display: flow-root;
+}
+
+#form .checkboxes label input {
+  float: left;
+  margin: 0 1em 0 0;
+  height: 1.75rem;
+}
+
+#form .captcha {
+  display: flex;
+  align-items: center;
+  background: #101822;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 20rem;
+}
+
+#form .captcha label {
+  order: 2;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+#form .captcha input {
+  order: 1;
+  transform: scale(2);
+  margin: 1.5em 1.5em 1.5em 1em;
+  width: 1.3rem;
+}
+
+#form .captcha > div {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form .captcha > div img {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+#form .captcha > div p {
+  font-size: 70%;
+  margin: 0;
+}
+
+#form .captcha > div p a {
+  color: grey;
+}
+
+#form .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+#form .buttons button[type="submit"] {
+  cursor: pointer;
+  font-size: 110%;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.15em;
+  background: #38b01d;
+  padding: 0.75rem 2rem;
+}
+
+#form .buttons button[type="submit"]:hover {
+  background-color: #46db24;
+}
+
+#form .buttons button[type="submit"]:active {
+  color: white;
+  background-color: #2a8415;
+}
+
+#description {
+  background-color: #1B2838;
 }

@@ -1,3 +1,144 @@
-img {
-	width: 10rem;
+#form {
+	z-index: 1;
+	background: linear-gradient(to bottom right, $colour-light, darken($colour-light, 20%));
+
+	header {
+		margin-bottom: 2rem;
+
+		img {
+			width: 8rem;
+		}
+
+		h1 {
+			font-size: 1.75rem;
+			line-height: 2.5;
+			text-transform: uppercase;
+			letter-spacing: -0.025em;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.fields {
+		label {
+			color: white;
+		}
+
+		label span {
+			position: relative;
+			padding: 0.5em;
+
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+				border-radius: 50%;
+				padding: 0.4em;
+				background: darken($colour-light, 15%);
+				width: 1ch;
+				height: 1ch;
+			}
+		}
+
+		input {
+			display: block;
+			width: 22.5rem;
+			min-height: 2rem;
+			margin-bottom:1rem;
+			background-color: darken($colour-light, 20%);
+			border: 0.05rem solid $colour-light;
+			color: white;
+			font: 100%/1.75 Arial, Helvetica, sans-serif;
+			padding: 0.25rem 0.75rem;
+		}
+	}
+
+	.checkboxes {
+		label {
+			display: block;
+			display: flow-root;
+
+			input {
+				float: left;
+				margin: 0 1em 0 0;
+				height: 1.75rem;
+			}
+		}
+	}
+
+	.captcha {
+		display: flex;
+		align-items: center;
+		background: $colour-dark;
+		margin: 1rem 0;
+		padding: 0.5rem;
+		width: 20rem;
+
+		label {
+			order: 2;
+			flex-shrink: 0;
+			flex-grow: 1;
+		}
+
+		input {
+			order: 1;
+			transform: scale(2);
+			margin: 1.5em 1.5em 1.5em 1em;
+			width: 1.3rem;
+		}
+
+		& > div {
+			order: 3;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			img {
+				width: 2.75rem;
+				height: 2.75rem;
+			}
+
+			p {
+				font-size: 70%;
+				margin: 0;
+
+				a {
+					color: grey;
+				}
+			}
+		}
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 2.5rem;
+
+		button[type="submit"] {
+			cursor: pointer;
+			font-size: 110%;
+			font-weight: 700;
+			border: none;
+			border-radius: 0.15em;
+			background: adjust-color($colour-light, $hue: 265deg, $saturation: 25);
+			padding: 0.75rem 2rem;
+
+			&:hover {
+				background-color: lighten(adjust-color($colour-light, $hue: 265deg, $saturation: 25), 10%);
+			}
+
+			&:active {
+				color: white;
+				background-color: darken(adjust-color($colour-light, $hue: 265deg, $saturation: 25), 10%);
+			}
+		}
+	}
 }

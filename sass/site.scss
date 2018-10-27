@@ -17,6 +17,19 @@ h2 {
 	margin: 0;
 }
 
+a:link,
+a:visited {
+	color: $colour-text;
+}
+
+a:hover {
+	color: lighten($colour-light, 25%);
+}
+
+a:active {
+	color: $colour-light;
+}
+
 #form,
 #description {
 	padding: 5rem;
