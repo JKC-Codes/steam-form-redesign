@@ -1,3 +1,18 @@
 #description {
 	background-color: $colour-medium;
+	grid-column: 2/3;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+	}
+
+	ul {
+		list-style-position: inside;
+		padding: 0;
+
+		li {
+			margin: 1rem 0;
+		}
+	}
 }
