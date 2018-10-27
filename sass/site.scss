@@ -24,13 +24,11 @@ h2 {
 
 #form {
 	grid-area: 2/3/-2/-3;
-	background-color: $colour-light;
 }
 
 #description {
 	grid-area: 3/2/-3/-2;
-	background-color: $colour-medium;
 }
 
 @import "form";
-@import "aside";
+@import "description";
